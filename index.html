@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>James Miller</title>
+<!-- Include our personal style sheet -->
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<!-- Include Bootstrap's style sheet -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- This is a local style sheet -->
+<style>
+#ContactContainer{
+	display:none;
+}
+</style>
+
+</head>
+<body>
+<script> skill1 = document.getElementById('formskill1')</script>
+<!-- 
+   This first container contains the form that will 
+   populate our contact card. For your assignment, you
+   will need to add or change some form fields adapting
+   it to the new contact card.
+-->
+<!-- Confusion about assignment made me first implement the form from example. Still not quite sure if I was suppose to or not-->
+
+<!--<div class="container" id="FormContainer">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-5">
+		<h2>Sign Up</h2>
+			<form class="form-horizontal" role="form" id="contactForm">
+			  <div class="form-group">
+				<label for="Name" class="col-sm-2 control-label">Name</label>
+				<div class="col-sm-10">
+				  <div class="input-group">
+				  <div class="input-group-addon"><i class="fa fa-user" style="font-size:14px"></i></div>
+				  <input type="text" class="form-control" id="formName" placeholder="Name">
+				  </div>
+				</div>
+			  </div>
+			  <div class="form-group borderDiv">
+				<label for="Github" class="col-sm-2 control-label">Github</label>
+				<div class="col-sm-10">
+				  <div class="input-group">
+				  <div class="input-group-addon"><i class="fa fa-github-alt" style="font-size:14px"></i></div>
+				  <input type="text" class="form-control" id="formGithub" placeholder="Username">
+				  </div>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="IP" class="col-sm-2 control-label">ServerIP</label>
+				<div class="col-sm-10">
+				  <div class="input-group">
+				  <div class="input-group-addon"><i class="fa fa-database" style="font-size:14px"></i></div>
+				  <input type="text" class="form-control" id="formIP" placeholder="IP Address">
+				  </div>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="Image" class="col-sm-2 control-label">ImageURL</label>
+				<div class="col-sm-10">
+				  <div class="input-group">
+				  <div class="input-group-addon"><i class="fa fa-external-link" style="font-size:18px"></i></div>
+				  <input type="text" class="form-control" id="formImageLink" placeholder="Image link">
+				  </div>
+				</div>
+			  </div>
+				<div class="form-group">
+				<label for="Skills" class="col-sm-2 control-label">Skill 1</label>
+				<div class="col-sm-10">
+				  <div class="input-group">
+				  <div class="input-group-addon"><i class="fa fa-check-circle" style="font-size:18px"></i></div>
+				  <input type="text" class="form-control" id="formskills1" placeholder="Skill One">
+				  </div>
+				</div>
+			  </div>
+				<div class="form-group">
+				<label for="Skills" class="col-sm-2 control-label">Skill 2</label>
+				<div class="col-sm-10">
+				  <div class="input-group">
+				  <div class="input-group-addon"><i class="fa fa-check-circle" style="font-size:18px"></i></div>
+				  <input type="text" class="form-control" id="formskills2" placeholder="Skill Two">
+				  </div>
+				</div>
+			  </div>
+				<div class="form-group">
+				<label for="Skills" class="col-sm-2 control-label">Skill 3</label>
+				<div class="col-sm-10">
+				  <div class="input-group">
+				  <div class="input-group-addon"><i class="fa fa-check-circle" style="font-size:18px"></i></div>
+				  <input type="text" class="form-control" id="formskills3" placeholder="Skill Three">
+				  </div>
+				</div>
+			  </div>
+				<div class="form-group">
+				<label for="Skills" class="col-sm-2 control-label">Skill 4</label>
+				<div class="col-sm-10">
+				  <div class="input-group">
+				  <div class="input-group-addon"><i class="fa fa-check-circle" style="font-size:18px"></i></div>
+				  <input type="text" class="form-control" id="formskills4" placeholder="Skill Four">
+				  </div>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="Skills" class="col-sm-2 control-label">Bio:</label>
+				<div class="col-sm-10">
+				  <div class="input-group">
+				  <div class="input-group-addon"><i class="fa fa-paperclip" style="font-size:18px"></i></div>
+					<textarea class="form-control" id="formBio" style="width: 340px";></textarea>
+				  </div>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+				  <button type="submit" class="btn btn-default" id="CreateButton">Create Contact</button>
+				</div>
+			  </div>
+			</form>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+</div>
+<div class="container" id="ContactContainer">
+	<div class="container">
+		<div class="span3 well">
+			<center>
+			<a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="http://s7.postimg.org/6q9z34zmz/412686_337364642996536_316298249_o.jpg" name="aboutme" width="140" height="140" class="img-circle"></a>
+			<h3>James Miller</h3>
+			<em>click my face for more</em>
+			</center>
+		</div>
+		<!-- Modal -->
+		<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+						<h4 class="modal-title" id="myModalLabel">More About James</h4>
+						</div>
+					<div class="modal-body">
+						<center>
+						<img src="http://s7.postimg.org/6q9z34zmz/412686_337364642996536_316298249_o.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+						<h3 class="media-heading">James Miller <small>USA</small></h3>
+						<span><strong>My Skills: </strong></span>
+						  <span class="label label-warning">C++</span>
+							<span class="label label-info">IOS Development</span>
+							<span class="label label-info">Adobe Suites</span>
+							<span class="label label-success">Windows, UNIX</span>
+						</center>
+						<hr>
+						<center>
+						<p class ="text-left">IP Address: 104.131.135.157</p>
+						<p class ="text-left">Github account: James0427</p>
+						<p class="text-left"><strong>Bio: My name is James Miller and I am 22, I was born in Boise Idaho, but later moved to Fort Worth Texas. I went to the art institute for web design, but later moved to Midwestern State University for a computer science degree.</strong><br></p>
+						<br>
+						</center>
+					</div>
+					<div class="modal-footer">
+						<center>
+						<button type="button" class="btn btn-default" data-dismiss="modal">I've heard enough about James</button>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+		<div class="container">
+		<div class="span3 well">
+			<center>
+			<a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="http://s7.postimg.org/6q9z34zmz/412686_337364642996536_316298249_o.jpg" name="aboutme" width="140" height="140" class="img-circle"></a>
+			<h3>James Miller</h3>
+			<em>click my face for more</em>
+			</center>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+						<h4 class="modal-title" id="myModalLabel">More About James</h4>
+						</div>
+					<div class="modal-body">
+						<center>
+						<img src="http://s7.postimg.org/6q9z34zmz/412686_337364642996536_316298249_o.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+						<h3 class="media-heading">James Miller <small>USA</small></h3>
+						<span><strong>Skills: </strong></span>
+							<span class="label label-warning">C++</span>
+							<span class="label label-info">Adobe CS Suites</span>
+							<span class="label label-danger">ios Development</span>
+							<span class="label label-success">Windows 7, Unix</span>
+						</center>
+						<hr>
+						<center>
+						<p class ="text-left"><a href="https://github.com/james0427">Github Account</a></class>
+						<p class ="text-left">IP Address: 104.131.135.157</p>
+						<p class="text-left"><strong>Bio: </strong><br>
+							My name is James Miller and I am 22, I was born in Boise Idaho, but later moved to Fort Worth Texas.
+							I went to the art institute for web design, but later moved to Midwestern State University for a
+							computer science degree.</p>
+						<br>
+						</center>
+					</div>
+					<div class="modal-footer">
+						<center>
+						<button type="button" class="btn btn-default" data-dismiss="modal">I've heard enough about James</button>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script>
+$(function() {
+  //I can use regular comments inside our script tag!
+  
+  //Log the debug param to the console. I'm leaving this in
+  //as an example of how to write to the console.
+	console.log($.urlParam('debug'));
+	
+		//If I put ?debug=true on the URL, I will auto populate
+	//our form to speed up coding. This is an unnecessary 
+	//step, but pretty helpful.
+	if($.urlParam('debug')){
+		$('#formName').val('James Miller');
+		$('#formGithub').val('james0427');
+		$('#formIP').val('104.131.135.157');
+		$('#formImageLink').val('http://s7.postimg.org/6q9z34zmz/412686_337364642996536_316298249_o.jpg');
+		$('#formskills1').val('c++');
+		$('#formskills2').val('IOS Development');
+		$('#formskills3').val('Abode Suites');
+		$('#formskills4').val('Windows, UNIX');
+		$('#formBio').val('My name is James Miller and I am 22, I was born in Boise Idaho, but later moved to Fort Worth Texas. I went to the art institute for web design, but later moved to Midwestern State University for a computer science degree.');
+	}
+
+	//Add a Jquery animation to the classes: .title-contact and .contact-email
+	$(".title-contact, .contact-email").fadeIn("slow");
+  
+  //This attaches a function to the submit button of our form.
+  //When the form is submitted, it runs this function.
+	$( "#contactForm" ).submit(function( event ) {
+
+		// Stop form from submitting normally or block
+		// it from going to wherever the "action" dictated.
+		event.preventDefault();
+	
+    // Set the css attribute of the ContactContainer to "block"
+    // essentially showing it. 'display:none' hides an element.
+		//$('#ContactContainer').css( "display", "block" );
+		
+		//Hide the form we just filled out.
+		$('#FormContainer').css( "display", "none" );
+		
+		//Copy all the data from the form, to our contact card.
+		//Remember each form element has an 'id' so
+		//$('#idname') references an element on the page with that id.
+		//.html grabs the 'html' or the stuff in between the tags
+		//.val grabs the value that is in the form field
+		// So .html is for elements (div,p,li,etc.) and .val is for form fields (input type="something")
+		
+		$('#Name').html($('#formName').val());
+		$('#IPaddress').html($('#formIP').val());
+		$('#usernane').html($('#formGithub').val());
+		$('#image').html($('#formImageLink').val());
+		$('#bio').html($('#formbio').val());
+		$('#skills1').html($('#formskills1').val());
+		$('#skills2').html($('#formskills2').val());
+		$('#skills3').html($('#formskills3').val());
+		$('#skills4').html($('#formskills4').val());
+		
+	});
+});
+ 
+// This is a function I found that grabs the "GET" params off the URL
+// and makes them available as variables.
+// Example: "?debug=true" is accessed like: $.urlParam('debug')
+// If the URL looked like: ?id=98373&name=Terry&location=Texas then
+// I could access each var like: $.urlParam('id') or $.urlParam('name') or $.urlParam('location')
+$.urlParam = function(name){
+	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	if (results==null){
+		return null;
+	}
+	else{
+		return results[1] || 0;
+	}
+}
+</script>
+</body>
+</html>
